@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "Scoolterfrontsite",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/tmp/amplify-74b069b5-5f16-450c-8bd6-e5ad34ccbcbd/amplify/backend/api/Scoolterfrontsite/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "keyDescription": "api key description",
+      "expirationTime": 30
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ],
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    }
+  }
+}

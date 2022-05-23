@@ -1,0 +1,6 @@
+type TouristicPlace @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  nombre: String
+  imageurl: String
+  locationurl: String
+}
