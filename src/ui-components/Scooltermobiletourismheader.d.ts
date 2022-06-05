@@ -7,9 +7,7 @@
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
-export declare type ScoolterheaderProps = React.PropsWithChildren<Partial<FlexProps> & {
-    HeaderGap?: String;
-} & {
+export declare type ScooltermobiletourismheaderProps = React.PropsWithChildren<Partial<FlexProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Scoolterheader(props: ScoolterheaderProps): React.ReactElement;
+export default function Scooltermobiletourismheader(props: ScooltermobiletourismheaderProps): React.ReactElement;

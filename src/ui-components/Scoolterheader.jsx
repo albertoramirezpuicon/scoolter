@@ -12,7 +12,7 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Image } from "@aws-amplify/ui-react";
 export default function Scoolterheader(props) {
-  const { overrides, ...rest } = props;
+  const { HeaderGap = "400", overrides, ...rest } = props;
   const webUnderScorewhatsappOneOnClick = useNavigateAction({
     target: "_blank",
     type: "url",
@@ -30,7 +30,7 @@ export default function Scoolterheader(props) {
   });
   return (
     <Flex
-      gap="400px"
+      gap="120px"
       direction="row"
       justifyContent="center"
       alignItems="center"

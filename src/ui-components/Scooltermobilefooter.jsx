@@ -7,27 +7,25 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, Image, Text } from "@aws-amplify/ui-react";
-export default function Scooltercontact1200(props) {
+import { Flex, Text } from "@aws-amplify/ui-react";
+export default function Scooltermobilefooter(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
-      gap="400px"
-      direction="row"
-      justifyContent="center"
-      alignItems="center"
+      gap="10px"
+      direction="column"
       position="relative"
-      padding="24px 24px 24px 24px"
+      padding="10px 10px 10px 10px"
       backgroundColor="rgba(41,50,60,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Scooltercontact1200")}
+      {...getOverrideProps(overrides, "Scooltermobilefooter")}
     >
       <Text
         fontFamily="Roboto"
-        fontSize="24px"
+        fontSize="16px"
         fontWeight="400"
         color="rgba(255,255,255,1)"
-        lineHeight="30px"
+        lineHeight="25px"
         textAlign="left"
         display="flex"
         direction="column"
@@ -36,18 +34,9 @@ export default function Scooltercontact1200(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Scoolter S.A.C.&#xA;RUC 20603460112&#xA;Teléfono:  +51 957719036&#xA;Dirección: Mercado Plaza de Flores, Barranco, Lima, Perú&#xA;Empresa de alquiler de motos en Lima, Perú&#xA;Para contactos corporativos: ventas@scoolter.pe"
+        children="Scoolter S.A.C.&#xA;RUC 20603460112&#xA;Teléfono:  +51 957719036&#xA;Dirección: Mercado Plaza de Flores, &#x2028;Barranco, Lima, Perú&#xA;Empresa de alquiler de motos en Lima, Perú&#xA;ventas@scoolter.pe"
         {...getOverrideProps(overrides, "Ficha general")}
       ></Text>
-      <Image
-        width="190px"
-        height="184px"
-        shrink="0"
-        position="relative"
-        padding="0px 0px 0px 0px"
-        src="https://a360data.s3.us-east-2.amazonaws.com/Logotipo-22.png"
-        {...getOverrideProps(overrides, "Isotipo")}
-      ></Image>
     </Flex>
   );
 }

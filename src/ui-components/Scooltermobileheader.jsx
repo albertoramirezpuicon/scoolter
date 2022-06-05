@@ -8,46 +8,50 @@
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Image, Text } from "@aws-amplify/ui-react";
-export default function Scooltercontact1200(props) {
+export default function Scooltermobileheader(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
-      gap="400px"
+      gap="10px"
       direction="row"
-      justifyContent="center"
       alignItems="center"
       position="relative"
-      padding="24px 24px 24px 24px"
-      backgroundColor="rgba(41,50,60,1)"
+      padding="10px 26px 10px 26px"
+      backgroundColor="rgba(255,255,255,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Scooltercontact1200")}
+      {...getOverrideProps(overrides, "Scooltermobileheader")}
     >
-      <Text
-        fontFamily="Roboto"
-        fontSize="24px"
-        fontWeight="400"
-        color="rgba(255,255,255,1)"
-        lineHeight="30px"
-        textAlign="left"
-        display="flex"
-        direction="column"
-        justifyContent="flex-start"
-        shrink="0"
-        position="relative"
-        padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children="Scoolter S.A.C.&#xA;RUC 20603460112&#xA;Teléfono:  +51 957719036&#xA;Dirección: Mercado Plaza de Flores, Barranco, Lima, Perú&#xA;Empresa de alquiler de motos en Lima, Perú&#xA;Para contactos corporativos: ventas@scoolter.pe"
-        {...getOverrideProps(overrides, "Ficha general")}
-      ></Text>
       <Image
-        width="190px"
-        height="184px"
+        width="94px"
+        height="94px"
         shrink="0"
         position="relative"
         padding="0px 0px 0px 0px"
         src="https://a360data.s3.us-east-2.amazonaws.com/Logotipo-22.png"
         {...getOverrideProps(overrides, "Isotipo")}
       ></Image>
+      <Text
+        fontFamily="Roboto"
+        fontSize="24px"
+        fontWeight="800"
+        color="rgba(0,0,0,1)"
+        fontStyle="italic"
+        lineHeight="22px"
+        textAlign="left"
+        display="flex"
+        direction="column"
+        justifyContent="flex-start"
+        letterSpacing="0.33px"
+        shrink="0"
+        position="relative"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children="Scoolter&#xA;Rent a scooter in&#xA;Lima, Peru"
+        {...getOverrideProps(
+          overrides,
+          "Scoolter Rent a scooter in Lima, Peru"
+        )}
+      ></Text>
     </Flex>
   );
 }
