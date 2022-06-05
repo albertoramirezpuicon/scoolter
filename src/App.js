@@ -34,7 +34,7 @@ function App() {
     return (
       <div>
         <Scooltermobileheader />
-        <Player muted loop={true} autoPlay src="https://a360data.s3.us-east-2.amazonaws.com/SCOOLTER_edit.webm">
+        <Player playsInline muted loop={true} autoPlay src="https://a360data.s3.us-east-2.amazonaws.com/SCOOLTER_edit.webm">
           <ControlBar disableCompletely={true} />
         </Player>
         <Scooltermobilesocial />
@@ -57,7 +57,7 @@ function App() {
     return (
       <div>
         <Scoolterheader gap={"400px"} />
-        <Player muted loop={true} autoPlay src="https://a360data.s3.us-east-2.amazonaws.com/SCOOLTER_edit.webm">
+        <Player playsInline muted loop={true} autoPlay src="https://a360data.s3.us-east-2.amazonaws.com/SCOOLTER_edit.webm">
           <ControlBar disableCompletely={true} />
         </Player>
         <ScoolterIncludesHeader />
