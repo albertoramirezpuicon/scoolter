@@ -6,10 +6,28 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Flex, Image } from "@aws-amplify/ui-react";
 export default function Scooltermobilesocial(props) {
   const { overrides, ...rest } = props;
+  const webUnderScorewhatsappOneOnClick = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: "https://api.whatsapp.com/send?phone=51957719036&text=I%20want%20to%20rent%20a%20motorbike%20%F0%9F%9B%B5",
+  });
+  const webUnderScorefacebookOneOnClick = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: "https://www.facebook.com/scoolter.pe/",
+  });
+  const webUnderScoreinstagramOneOnClick = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: "",
+  });
   return (
     <Flex
       gap="10px"
@@ -40,6 +58,9 @@ export default function Scooltermobilesocial(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           src="https://a360data.s3.us-east-2.amazonaws.com/web_whatsapp.png"
+          onClick={() => {
+            webUnderScorewhatsappOneOnClick();
+          }}
           {...getOverrideProps(overrides, "web_whatsapp 1")}
         ></Image>
         <Image
@@ -49,6 +70,9 @@ export default function Scooltermobilesocial(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           src="https://a360data.s3.us-east-2.amazonaws.com/web_facebook.png"
+          onClick={() => {
+            webUnderScorefacebookOneOnClick();
+          }}
           {...getOverrideProps(overrides, "web_facebook 1")}
         ></Image>
         <Image
@@ -58,6 +82,9 @@ export default function Scooltermobilesocial(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           src="https://a360data.s3.us-east-2.amazonaws.com/web_instagram.png"
+          onClick={() => {
+            webUnderScoreinstagramOneOnClick();
+          }}
           {...getOverrideProps(overrides, "web_instagram 1")}
         ></Image>
       </Flex>
