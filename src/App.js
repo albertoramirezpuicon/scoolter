@@ -5,8 +5,11 @@ import { Player, ControlBar } from 'video-react';
 import { 
   Scoolterheader, ScoolterIncludesHeader, ScoolterFirstRowFlex, ScoolterSecondRowFlex, ScoolterTouristicPlaceCollection, 
   ScoolterTourismHeader, Scooltercontact1200, 
-  Scooltermobileheader, Scooltermobileincludes, Scooltermobilefooter, Scooltermobilesocial, Scooltermobiletourismheader
+  Scooltermobileheader, Scooltermobileincludes, Scooltermobilefooter, Scooltermobilesocial, Scooltermobiletourismheader,
 } from './ui-components';
+import {
+  Navigation
+} from './local-components';
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -16,7 +19,7 @@ function getWindowDimensions() {
   };
 }
 
-function App() {
+function App(props) {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   useEffect(() => {
@@ -30,11 +33,21 @@ function App() {
 
   var qtyItems = windowDimensions.width/320;
 
+  let languageStoredInLocalStorage = localStorage.getItem("language");
+  let [language, setLanguage] = useState(
+    languageStoredInLocalStorage ? languageStoredInLocalStorage : "English"
+  );
+
   if (windowDimensions.width < 800) {
     return (
       <div>
+        <Navigation language={language} handleSetLanguage={language => {
+          setLanguage(language);
+          storeLanguageInLocalStorage(language);
+        }}
+        />
         <Scooltermobileheader />
-        <Player playsInline={true} muted loop={true} autoPlay src="https://a360data.s3.us-east-2.amazonaws.com/SCOOLTER_edit.webm">
+        <Player playsInline muted loop={true} autoPlay src="https://a360data.s3.us-east-2.amazonaws.com/SCOOLTER_edit.webm">
           <ControlBar disableCompletely={true} />
         </Player>
         <Scooltermobilesocial />
@@ -78,7 +91,10 @@ function App() {
       </div>
     );
   }
-   
+  
+  function storeLanguageInLocalStorage(language) {
+    localStorage.setItem("language", language);
+  }
 }
 
 export default App;
