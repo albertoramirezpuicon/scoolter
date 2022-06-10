@@ -38,14 +38,26 @@ function App(props) {
     languageStoredInLocalStorage ? languageStoredInLocalStorage : "English"
   );
 
+  let content = {
+    English: {
+      footer: {
+        label: "Contact us"
+      }
+    },
+    Castellano: {
+      footer: {
+        label: "Contáctanos"
+      }
+    }
+  }
+
+  language === "Castellano"
+  ? (content = content.Castellano)
+  : (content = content.English);
+
   if (windowDimensions.width < 800) {
     return (
       <div>
-        <Navigation language={language} handleSetLanguage={language => {
-          setLanguage(language);
-          storeLanguageInLocalStorage(language);
-        }}
-        />
         <Scooltermobileheader />
         <Player playsInline muted loop={true} autoPlay src="https://a360data.s3.us-east-2.amazonaws.com/SCOOLTER_edit.webm">
           <ControlBar disableCompletely={true} />
@@ -76,7 +88,7 @@ function App(props) {
         <ScoolterIncludesHeader />
         <ScoolterFirstRowFlex />
         <ScoolterSecondRowFlex />
-        <ScoolterTourismHeader />
+        <ScoolterTourismHeader children={"Hola"} />
         <ScoolterTouristicPlaceCollection itemsPerPage={qtyItems} />
         <iframe
           title="ScoolterPeruLocation"
@@ -87,7 +99,13 @@ function App(props) {
           referrerpolicy="no-referrer-when-downgrade"
           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAP7hfbLnZ8ZMdUVzgIP89ahLfbe65lRwE&q=Scoolter+Peru,Lima+Peru">
         </iframe>
+        <p>{language} / {content.footer.label}</p>
         <Scooltercontact1200 />
+        <Navigation language={language} handleSetLanguage={language => {
+          setLanguage(language);
+          storeLanguageInLocalStorage(language);
+        }}
+        />
       </div>
     );
   }

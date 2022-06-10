@@ -39,7 +39,7 @@ export default function Scooltermobileincludes(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="What is included &#xA;in your rental?"
-        {...getOverrideProps(overrides, "What is included in your rental?")}
+        {...getOverrideProps(overrides, "lblHeader")}
       ></Text>
       <Flex
         gap="36px"

@@ -34,8 +34,8 @@ export default function Scooltermobilefooter(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Scoolter S.A.C.&#xA;RUC 20603460112&#xA;Teléfono:  +51 957719036&#xA;Dirección: Mercado Plaza de Flores, &#x2028;Barranco, Lima, Perú&#xA;Empresa de alquiler de motos en Lima, Perú&#xA;ventas@scoolter.pe"
-        {...getOverrideProps(overrides, "Ficha general")}
+        children="Scoolter S.A.C.&#xA;RUC 20603460112&#xA; +51 957719036&#xA;Mercado Plaza de Flores,  Barranco, Lima, Perú&#xA;ventas@scoolter.pe"
+        {...getOverrideProps(overrides, "lblDatos")}
       ></Text>
     </Flex>
   );

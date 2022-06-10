@@ -7,7 +7,7 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, Image } from "@aws-amplify/ui-react";
+import { Flex, Text } from "@aws-amplify/ui-react";
 export default function ScoolterIncludesHeader(props) {
   const { overrides, ...rest } = props;
   return (
@@ -22,15 +22,24 @@ export default function ScoolterIncludesHeader(props) {
       {...rest}
       {...getOverrideProps(overrides, "ScoolterIncludesHeader")}
     >
-      <Image
-        width="800px"
-        height="83.98px"
+      <Text
+        fontFamily="Roboto"
+        fontSize="48px"
+        fontWeight="800"
+        color="rgba(0,0,0,1)"
+        fontStyle="italic"
+        lineHeight="56.25px"
+        textAlign="center"
+        display="flex"
+        direction="column"
+        justifyContent="center"
         shrink="0"
         position="relative"
         padding="0px 0px 0px 0px"
-        src="https://a360data.s3.us-east-2.amazonaws.com/web_textwhatincluded.png"
-        {...getOverrideProps(overrides, "web_textwhatincluded 1")}
-      ></Image>
+        whiteSpace="pre-wrap"
+        children="What is included in your motorbike rental?"
+        {...getOverrideProps(overrides, "lblTitle")}
+      ></Text>
     </Flex>
   );
 }
