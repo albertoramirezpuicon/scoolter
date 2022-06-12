@@ -88,7 +88,7 @@ function App(props) {
         <ScoolterIncludesHeader />
         <ScoolterFirstRowFlex />
         <ScoolterSecondRowFlex />
-        <ScoolterTourismHeader children={"Hola"} />
+        <ScoolterTourismHeader />
         <ScoolterTouristicPlaceCollection itemsPerPage={qtyItems} />
         <iframe
           title="ScoolterPeruLocation"
